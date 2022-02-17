@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Spore</title>
+        <link rel="stylesheet" href="https://use.typekit.net/whn2icp.css">
+
+
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+
+        <!-- Masthead-->
+        <div id="particles-js"></div>
+
+            <header class="masthead1">
+                <div class="container">
+                  <div id = "top">
+                   </div>
+                </div>
+
+
+            </header>
+        <!-- particles.js container -->
+        <section class="intro">
+          <div class="container">
+            <div class="card">
+              <a href = "pedia.html"><img src = "img/x.png" id = "x"></a>
+<div id = new>
+  <img src= "img/creaturePro.png" id = "cphoto" width:"100%">
+
+  <h1>SHIN GODZILLA</h1>
+  <p class="price">By IndominusVolt</p>
+  <p>  <table>
+      <tr>
+      </tr>
+      <tr>
+        <td><img src = "img/meat.png" id = "sym"></td>
+      </tr>
+      <tr>
+        <td>DOB 9/21/2021</td>
+      </tr>
+    </table></p>
+  <p><button>IndominusVolt's Library</button></p>
+  <p><button>Download</button></p>
+</div>
+</div>
+
+<div class="comments-app" ng-app="commentsApp" ng-controller="CommentsController as cmntCtrl">
+
+  <!-- From -->
+  <div class="comment-form">
+    <!-- Comment Avatar -->
+    <div class="comment-avatar">
+    </div>
+
+    <form class="form" name="form" ng-submit="form.$valid && cmntCtrl.addComment()" novalidate>
+      <div class="form-row">
+        <textarea
+                  class="input"
+                  ng-model="cmntCtrl.comment.text"
+                  placeholder="Add comment..."
+                  required></textarea>
+      </div>
+
+      <div class="form-row">
+        <input
+               class="input"
+               ng-class="{ disabled: cmntCtrl.comment.anonymous }"
+               ng-disabled="cmntCtrl.comment.anonymous"
+               ng-model="cmntCtrl.comment.author"
+               ng-required="!cmntCtrl.comment.anonymous"
+               placeholder="Email"
+               type="email">
+      </div>
+
+      <div class="form-row text-right">
+        <input
+               id="comment-anonymous"
+               ng-change="cmntCtrl.anonymousChanged()"
+               ng-model="cmntCtrl.comment.anonymous"
+               type="checkbox">
+        <label for="comment-anonymous">Anonymous</label>
+      </div>
+
+      <div class="form-row">
+        <input type="submit" value="Add Comment">
+      </div>
+    </form>
+  </div>
+
+  <!-- Comments List -->
+  <div class="comments">
+    <!-- Comment -->
+    <div class="comment" ng-repeat="comment in cmntCtrl.comments | orderBy: '-date'">
+      <!-- Comment Avatar -->
+      <div class="comment-avatar">
+        <img src="img/p.jpg">
+      </div>
+
+      <!-- Comment Box -->
+      <div class="comment-box">
+        <div class="comment-text">To be fair, I did perceive something big was to happen for this titanic omnivore. Plus, "Dominiric" is a pretty cool name.</div>
+        <div class="comment-footer">
+          <div class="comment-info">
+            <span class="comment-author">
+              <a ng-if="!comment.anonymous" href="{{ comment.author }}">BlazinCake96</a>
+            </span>
+            <span class="comment-date">Sept 28, 2021 12:32:04 PM</span>
+          </div>
+
+          <div class="comment-actions">
+            <a href="#">Reply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment - Dummy -->
+    <div class="comment">
+      <!-- Comment Avatar -->
+      <div class="comment-avatar">
+        <img src="img/creaturePro3.png">
+      </div>
+
+      <!-- Comment Box -->
+      <div class="comment-box">
+        <div class="comment-text">That's a pretty nice creation also congrats on the feature.</div>
+        <div class="comment-footer">
+          <div class="comment-info">
+            <span class="comment-author">
+              <a href="mailto:sexar@pagelab.io">Leka06</a>
+            </span>
+            <span class="comment-date">Sept 28, 2021 11:32:04 PM</span>
+          </div>
+
+          <div class="comment-actions">
+            <a href="#">Reply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment - Dummy -->
+    <div class="comment">
+      <!-- Comment Avatar -->
+      <div class="comment-avatar">
+        <img src="img/creaturePro2.png">
+      </div>
+
+      <!-- Comment Box -->
+      <div class="comment-box">
+        <div class="comment-text">featured creations? in 2021? its more likely than you think.</div>
+        <div class="comment-footer">
+          <div class="comment-info">
+            <span class="comment-author">
+              <a href="mailto:ximme13@somedomain.io">nyaago</a>
+            </span>
+            <span class="comment-date">Sept 27, 2021 11:32:04 PM</span>
+          </div>
+
+          <div class="comment-actions">
+            <a href="#">Reply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+        </section>
+
+        <div class="container">
+          <div id = "bottom">
+            <p id = "copy"> Copyright &copy; Electronic Arts Inc All Rights Reserved </p>
+            <img src = "img/E_T.gif" id = "pic" width: "20%"/>
+            <img src = "img/ea_white.png" id = "pic" width: "20%"/>
+            <img src = "img/MaxisWhite.png" id = "pic" width: "20%"/>
+
+            <a class="btn btn-primary btn-xl " id = "sporebtn" href="#services"> <p id = "text"> Buy SPORE Today </p></a>
+
+
+          </div>
+
+      </div>
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="js/scripts3.js"></script>
+
+    </body>
+
+</html>
